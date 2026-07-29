@@ -4,8 +4,7 @@ class Solution {
         for(int i=0; i<arr.length; i++){
             int r = -1;
             for(int j=i+1; j<arr.length; j++){
-                if(r<arr[j])
-                    r=arr[j];
+                    r = Math.max(r,arr[j]);
             }
             arr[i]=r;
         }
