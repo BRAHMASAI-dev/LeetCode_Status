@@ -2,8 +2,7 @@ class Solution {
     public int largestRectangleArea(int[] heights) {
         int maxArea =0;
         int n = heights.length;
-        Stack<int[]> st = new Stack<>();
-        //process of filling the stack 
+        Stack<int[]> st = new Stack<>(); 
         for(int i=0; i<n; i++){
             int start = i;
         while(!st.isEmpty() && heights[i]<st.peek()[0]){
@@ -17,8 +16,6 @@ class Solution {
         }
         st.push(new int[]{heights[i], start});
         }
-        
-        //process for emptying the stack 
         while(!st.isEmpty()){
             int[] top = st.pop(); 
             int ht = top[0];
