@@ -25,6 +25,6 @@ public class Solution {
             else
                 p2 = headA;
         }
-        return p1;
+        return p2;
     }
 }
